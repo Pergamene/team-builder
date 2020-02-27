@@ -4,11 +4,13 @@ import TeamList from './TeamList.jsx';
 import Form from './Form.jsx';
 
 const TeamListContainer = () => {
-  const [teamList, setTeamList] = useState([]);
+  const [teamList, setTeamList] = useState([{name: 'Austin', email: 'email@gmail.com', role: 'developer'}]);
 
-  const updateTeamList = newTeamList => {
-    setTeamList(newTeamList);
+  const updateTeamList = newTeamMember => {
+    setTeamList([...teamList, newTeamMember]);
   }
+
+  console.log('TeamListContainerTeamList', teamList);
 
   return (
     <Fragment>
@@ -16,6 +18,6 @@ const TeamListContainer = () => {
       <Form updateTeamList={updateTeamList} />
     </Fragment>
   );
-}
+};
 
 export default TeamListContainer;
