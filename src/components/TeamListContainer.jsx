@@ -14,8 +14,8 @@ const TeamListContainer = () => {
 
   return (
     <Fragment>
-      <TeamList teamList={teamList} />
       <Form updateTeamList={updateTeamList} />
+      <TeamList teamList={teamList} />
     </Fragment>
   );
 };
